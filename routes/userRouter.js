@@ -5,7 +5,7 @@ const {registerRules, validator} = require('../middlewares/Validator')
 
 
 
-router.post('/register',registerRules, validator, userController.register);
+router.post('/register',registerRules(), validator, userController.register);
 
 router.post('/login',userController.login);
 

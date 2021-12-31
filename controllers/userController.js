@@ -10,8 +10,8 @@ const token_access_secret = config.get('token_access_secret')
 const userController = {
 
     register : async(req, res) =>{
+        const {fullName, email, password} = req.body;
         try {
-            const {fullName, email, password} = req.body;
             const user = await Users.findOne({email});
             if (user) return res.status(404).json({msg:"seem like this email is already registered"});
             
