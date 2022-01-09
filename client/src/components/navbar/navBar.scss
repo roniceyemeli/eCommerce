@@ -1,0 +1,68 @@
+@import "../../../global.scss";
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: $blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 6%;
+
+    .logo{
+        font-size: 1.7rem;
+        font-weight: bolder;
+        text-decoration: none;
+        background-color: $blue;
+        color: $white;
+
+        i{
+            color: $gold;
+            background-color: $blue;
+        }
+    }
+
+    .search-form{
+        border-radius: 5rem;
+        background-color: $white;
+        height: 2.5rem;
+        width: 20rem;
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+
+        input{
+            width: 260px;
+            padding-right: 1rem;
+            font-size: 1rem;
+            text-transform: none;
+            background: $white;
+        }
+        label{
+            font-size: 1.4rem;
+            color: $light-black;
+            cursor: pointer;
+            background-color: $white;
+            &:hover{
+                color:$blue;
+            }
+        }
+    }
+
+    .icons{
+        background-color: $blue;
+        div{
+            @include icon
+        }
+        a{
+            @include icon
+        }
+
+        #search-btn{
+            display: none;
+        }
+    }
+}

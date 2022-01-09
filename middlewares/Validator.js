@@ -1,7 +1,7 @@
 const {check, validationResult} = require('express-validator');
 
 exports.registerRules = () => [
-    check('fullName', 'This field is required').notEmpty(),
+    check('userName', 'your user name is required').notEmpty(),
     check('email', 'This field is required').notEmpty(),
     check('email', 'This should be a valid email').isEmail(),
     check('password', 'This field should be at least 6 character').isLength({min:6})

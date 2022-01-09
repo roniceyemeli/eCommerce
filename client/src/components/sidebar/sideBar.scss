@@ -1,0 +1,79 @@
+@import "../../../global.scss";
+
+
+.side-bar{
+    position: fixed;
+    top: 0;
+    left:-110px;
+    height: 100%;
+    width: 30rem;
+    background-color: $white;
+    z-index: 10000;
+
+    // &:active {
+    //     left: 0;
+    //     box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+    // }
+
+    #close-side-bar{
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        font-size: 2rem;
+        color: $light-black;
+        cursor: pointer;
+
+        &:hover{
+            transform: rotate(180deg);
+            color: $black;
+        }
+    }
+
+    .user{
+        padding: 2rem;
+        background-color: $light-bg;
+        text-align: center;
+
+        i{
+            font-size: 5rem;
+            color: $blue;
+            cursor: pointer;
+        }
+
+        h3{
+            font-size: 2rem;
+            padding: .5rem 0;
+            color: $light-black;
+        }
+        a{
+            font-size: 1.3rem;
+            color: $blue;
+            text-decoration: none;
+
+            &:hover{
+                color: $black;
+            }
+        }
+    }
+
+    .navbar{
+        padding-top: 1rem;
+
+        a{
+            display: block;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            color: $light-black;
+            text-decoration: none;
+            &:hover{
+                color: $blue;
+                i{
+                    padding-right: 1rem;
+                }
+            }
+            i{
+                padding-right: .5rem;
+            }
+        }
+    }
+}

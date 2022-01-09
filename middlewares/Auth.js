@@ -1,28 +1,26 @@
 const config = require('config');
-const token_access_secret = config.get('token_access-secret');
-const User = require('../models/User');
+const token_access_secret = config.get('token_access_secret');
 const jwt = require('jsonwebtoken');
 
 
 
-const Auth = (res, req, next) => {
-    const token = req.header('Authorization');
-    if(!token) {
-        res.status(404).json({msg: "Invalid Authentification"})
-    }
+const Auth =  (req, res, next) => {
     try {
+        const token = req.header('Authorization');
+        if(!token) {
+            res.status(404).json({msg: "Invalid Authentification"})
+        }
         //we decode the user passwword and verify if it fit with the one stored in th database
-        const decoded = jwt.verify(token, token_access_secret);
-        const user = await User.findById(decoded.id).select('-password')
-        if(!user){
-            return res.status(404).json({msg: "not Authorized"})
-        }
-        else{
+        const decoded = jwt.verify(token, token_access_secret, (err, user) =>{
+            if(err) return res.status(404).json({msg: 'Not Authorized'})
+        
             req.user = user;
-            next();
-        }
+        });
+        
+        next();
+        
     } catch (error) {
-        return res.status(500).json({msg: error.message})
+        res.status(500).json({msg: error.message})
     }
 }
 

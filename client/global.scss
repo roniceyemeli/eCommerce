@@ -1,0 +1,97 @@
+$blue: #0984e3;
+$black: #333;
+$white: #fff;
+$gold: gold;
+$light-black: #666;
+$light-bg: #eee;
+$border: .2rem solid $light-black;
+$box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+
+@mixin icon{
+    font-size: 1.6rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    background-color: $blue;
+    color: $white;
+    &:hover{
+        color: $gold;
+    }
+}
+
+.btn{
+    margin-top: .5rem;
+    display: inline-block;
+    border-radius: .5rem;
+    padding: .7rem .8rem;
+    font-size: 1.3rem;
+    color: $white;
+    cursor: pointer;
+}
+
+.login,
+.register{
+
+    form{
+        max-width: 25rem;
+        padding: 2rem;
+        text-transform: none;
+        background-color: $white;
+        box-shadow: $box-shadow;
+        margin: 1rem auto;
+        border: .2rem solid #adcce4;
+
+        h3{
+            font-size: 2rem;
+            padding-bottom: 1rem;
+            color: $light-black;
+            text-transform: uppercase;
+            background-color: $white;
+        }
+        .box{
+            width: 100%;
+            padding: .7rem;
+            border-radius: .5rem;
+            border: $border;
+            font-size: 1rem;
+            color: $light-black;
+            text-transform: none;
+            margin: .7rem 0;
+            background-color: $white;
+        }
+        .show{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background-color: $white;
+
+            label{
+                font-size: 1rem;
+                color: $light-black;
+                cursor: pointer;
+                background-color: $white;
+            }
+        }
+    }
+    .btn{
+        width: 100%;
+        text-align: center;
+        background-color: $blue;
+        &.link{
+            background-color: $black;
+            text-decoration: none;
+            &:hover{
+                background-color: $blue;
+            }
+        }
+    }
+    p{
+        padding-top: 1rem;
+        font-size: 1.1rem;
+        color: $light-black;
+        text-align: center;
+        padding-bottom: 1rem;
+        background-color: $white;
+    }
+}
