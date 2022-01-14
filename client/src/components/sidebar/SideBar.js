@@ -1,28 +1,100 @@
-import React from 'react';
-import './sideBar.scss';
-import { Link } from 'react-router-dom';
+import React, { useContext } from "react";
+import "./sideBar.scss";
+import { Link } from "react-router-dom";
+import { GlobalState } from "../../GlobalState";
+import axios from "axios";
 
-const SideBar = ({openMenu, setOpenMenu}) => {
+const SideBar = ({ openMenu, setOpenMenu }) => {
+  const state = useContext(GlobalState);
+  const [isLogged] = state.userApi.isLogged;
+  const [isAdmin] = state.userApi.isAdmin;
+
+  const closeMenu = () => {
+    setOpenMenu(!openMenu);
+  };
+  const adminRoutes = () => {
     return (
-        <div className="side-bar">
+      <>
 
-            <div id="close-side-bar" className="fas fa-times" onClick={()=> setOpenMenu(!openMenu)}></div>
+        <Link to="/addProduct" onClick={closeMenu}>
+          <i className="fas fa-angle-right"></i>add products
+        </Link>
+        <Link to="/category" onClick={closeMenu}>
+          <i className="fas fa-angle-right"></i>categories
+        </Link>
 
-            <div className="user">
-                <i className="fas fa-store"></i>
-                <h3>welcome</h3>
-                <Link to="#">login</Link>
-            </div>
+      </>
+    );
+  };
 
-            <nav className='navbar'>
-                <Link to='#'>shop</Link>
-                <Link to='/login'>login</Link>
-                <Link to='/register'>register</Link>
-                <Link to='#'>cart</Link>
-                <Link to='#'>contact</Link>
-            </nav>
-        </div>
-    )
-}
+  const logoutUser = async () => {
+    try {
+      await axios.get("/user/logout");
+      localStorage.clear();
+      window.location.href = "/";
+    } catch (error) {
+      alert(error.response.data.msg);
+    }
+  };
 
-export default SideBar
+  const loggedRoutes = () => {
+    return (
+      <>
+        <Link to="#" onClick={closeMenu}>
+              <i className="fas fa-angle-right"></i>cart
+        </Link>
+
+        <Link to="#" onClick={closeMenu}>
+          <i className="fas fa-angle-right"></i>History
+        </Link>
+        
+        <Link to="/" onClick={logoutUser}>
+          <i className="fas fa-angle-right"></i>Logout
+        </Link>
+      </>
+    );
+  };
+
+  return (
+    <div className="side-bar active">
+      <div
+        id="close-side-bar"
+        className="fas fa-times"
+        onClick={() => setOpenMenu(!openMenu)}
+      ></div>
+
+      <div className="user">
+        <i className="fas fa-store"></i>
+        <h3>{isAdmin ? "admin" : "welcome"}</h3>
+        <Link to="#">
+          {isLogged ? "Dashboard" : "please sign in"}
+        </Link>
+      </div>
+
+      <nav className="navbar">
+        {isAdmin && adminRoutes()}
+        {isLogged ? (
+          loggedRoutes()
+        ) : (
+          <>
+            <Link to="/" onClick={closeMenu}>
+              <i className="fas fa-angle-right"></i>shop
+            </Link>
+            <Link to="/login" onClick={closeMenu}>
+              <i className="fas fa-angle-right"></i>login
+            </Link>
+            <Link to="/register" onClick={closeMenu}>
+              <i className="fas fa-angle-right"></i>register
+            </Link>
+            
+            <Link to="#" onClick={closeMenu}>
+              <i className="fas fa-angle-right"></i>contact
+            </Link>
+          </>
+        )}
+      </nav>
+    </div>
+  );
+};
+
+export default SideBar;

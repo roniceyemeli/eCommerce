@@ -1,0 +1,95 @@
+@import '../../../../global.scss';
+
+
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 2rem;
+    background-color: $white;
+    box-shadow: $box-shadow;
+    border-radius: 10px;
+
+    form{
+        max-width: 290px;
+        margin-bottom: 20px;
+        background-color: $white;
+        label{
+            display: block;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            background-color: $white;
+        }
+        input{
+            width: 12rem;
+            padding: .7rem;
+            background-color: $white;
+            border: $border;
+            border-radius: 10px;
+        }
+        button{
+            background-color: $white;
+
+            i{
+                font-size: 2rem;
+                color: $blue;
+                background-color: $white;
+                margin-left: 1rem;
+                transform: translateY(6px);
+                cursor: pointer;
+                &:hover{
+                    color: $light-blue;
+                }
+                &:active{
+                    color: $black;
+                }
+            }
+        }
+    }
+        
+    .right{
+        margin-left: 5em;
+        background-color: $white;
+
+        .roww{
+            min-width: 10rem;
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            padding: .7rem;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+
+            button{
+                width: 70px;
+                height: 1rem;
+                color: $blue;
+                margin-left: 10px;
+
+                i{
+                    font-size: 1rem;
+                    cursor: pointer;
+                    &#del{
+                        color: $red;
+                        &:hover{
+                            color: crimson;
+                        }
+                    }
+                    &#edit{
+                        color: $blue;
+                        &:hover{
+                            color: $light-blue;
+                        }
+                    }
+                    &:active{
+                        color: $light-black;
+                    }
+                }
+            }
+        }
+    }
+}

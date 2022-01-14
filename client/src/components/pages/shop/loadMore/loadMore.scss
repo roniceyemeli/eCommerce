@@ -1,0 +1,17 @@
+@import '../../../../../global.scss' ;
+
+.load-more{
+    text-align: center;
+    button{
+        padding: 5px 20px;
+        margin-bottom: 20px;
+        border: 1px solid rgb(94,78,201);
+        border-radius: 5rem;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $blue;
+            color: $white;
+        }
+    }
+}

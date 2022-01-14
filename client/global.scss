@@ -1,6 +1,8 @@
 $blue: #0984e3;
+$light-blue:rgb(116, 149, 233);
 $black: #333;
 $white: #fff;
+$red: red;
 $gold: gold;
 $light-black: #666;
 $light-bg: #eee;
@@ -30,7 +32,7 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
 
 .login,
 .register{
-
+    
     form{
         max-width: 25rem;
         padding: 2rem;
@@ -78,6 +80,9 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
         width: 100%;
         text-align: center;
         background-color: $blue;
+        &:active{
+            background-color: $black;
+        }
         &.link{
             background-color: $black;
             text-decoration: none;
@@ -93,5 +98,35 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
         text-align: center;
         padding-bottom: 1rem;
         background-color: $white;
+    }
+}
+
+.deleteAll{
+    text-align: right;
+    margin: 10px;
+    padding-right: 4rem;
+    
+    input{
+        height: 25px;
+        width: 25px;
+        margin: 0 15px;
+        transform: translateY(5px);
+    }
+
+    span{
+        color: $light-black;
+        letter-spacing: 1px;
+    }
+
+    button{
+        border: 1px solid $red;
+        border-radius: 10px;
+        padding: .7rem;
+        color: $black;
+        cursor: pointer;
+        &:hover{
+            color: $white;
+            background-color: $red;
+        }
     }
 }

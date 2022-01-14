@@ -1,0 +1,89 @@
+@import "../../../../global.scss";
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($val, 1fr));
+  justify-content: center;
+}
+
+.products {
+  @include grid(19rem);
+  padding: 1rem 3rem;
+
+  .box {
+    margin-top: 1rem;
+    border: $border;
+    text-align: center;
+    background: $white;
+    box-shadow: $box-shadow;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 300px;
+    height: 29rem;
+    position: relative;
+
+    input {
+      z-index: 2;
+      position: absolute;
+      top: 7rem;
+      left: .7rem;
+      width: 25px;
+      height: 20px;
+    }
+
+    .image {
+      position: relative;
+      background-color: $white;
+
+      img {
+        height: 19rem;
+        width: 100%;
+        background-color: $white;
+      }
+
+      .icons {
+        position: absolute;
+        top: 0;
+        left: .5rem;
+        background-color: transparent;
+
+        a {
+          display: block;
+          margin-top: 1rem;
+          height: 2rem;
+          width: 2rem;
+          line-height: 2rem;
+          font-size: 1rem;
+          border-radius: 50%;
+          color: $white;
+          background: $black;
+
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+
+    .content {
+      padding: 0.5rem;
+      background-color: $white;
+
+      h3 {
+        font-size: 1.5rem;
+        color: $black;
+        background-color: $white;
+      }
+      .price {
+        font-size: 2.2rem;
+        color: $blue;
+        background-color: $white;
+      }
+      span {
+        color: $light-black;
+        font-size: 1.5rem;
+        background-color: $white;
+      }
+    }
+  }
+}

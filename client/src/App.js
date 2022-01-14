@@ -1,26 +1,23 @@
-import './App.css';
+import React from 'react';
 import NavBar from './components/navbar/NavBar';
-import {BrowserRouter as Router, Routes,Route} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 import SideBar from './components/sidebar/SideBar';
 import { useState } from 'react';
-import Login from './components/pages/login/Login';
-import Register from './components/pages/register/Register';
+import { DataProvider } from './GlobalState';
+import Home from './components/Home';
 
 
 function App() {
   const [openMenu, setOpenMenu] = useState(false)
 
   return (
-    <div className="App">
+    <DataProvider>
       <Router>
             <NavBar openMenu={openMenu} setOpenMenu={setOpenMenu}/>
-            { openMenu ? <SideBar openMenu={openMenu} setOpenMenu={setOpenMenu}/> : null}
-            <Routes>
-                <Route exact path='/login' element={<Login/>}/>
-                <Route exact path='/register' element={<Register/>}/>
-            </Routes>            
+            { openMenu ? <SideBar openMenu={openMenu} setOpenMenu={setOpenMenu}/> : null}           
+            <Home/>
       </Router>
-    </div>
+    </DataProvider>
   );
 }
 

@@ -1,0 +1,28 @@
+@import "../../../../global.scss";
+
+@keyframes rotate{
+    50%{transform: rotate(80deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.loading {
+  overflow: hidden;
+  padding-top: 7rem;
+  padding-left: 6rem;
+  padding-right: 1rem;
+
+  .loader {
+    width: 150px;
+    height:150px;
+    margin: auto;
+
+    div {
+      width: calc(100% - 15px);
+      height: calc(100% - 15px);
+      border: 2px solid #fff;
+      border-top: 2px solid $light-blue;
+      border-radius: 50%;
+      animation: rotate 5s linear infinite alternate-reverse;
+    }
+  }
+}
