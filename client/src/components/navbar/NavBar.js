@@ -6,17 +6,8 @@ import "./navBar.scss";
 const NavBar = ({ openMenu, setOpenMenu }) => {
 
     const state = useContext(GlobalState);
-    // const [categories] = state.categoriesApi.categories;
-
-    // const [category, setCategory] = state.ProductsApi.category;
-    // console.log("category is", category)
     const [search, setSearch] = state.ProductsApi.search;
-
-    // const handleCategory=(e)=>{
-    //     setCategory(e.target.value);
-    //     setSearch('')
-    // }
-
+    const[cart] =state.userApi.cart;
 
   return (
     <div className="header">
@@ -36,20 +27,6 @@ const NavBar = ({ openMenu, setOpenMenu }) => {
         <label htmlFor="search-box" className="fas fa-search"></label>
       </form>
 
-      {/* <div className="filterMenu">
-          <span>categories:</span>
-          <select name='category' value={category} onChange={handleCategory}>
-                    <option value=''>All Products</option>
-                    {   
-                        categories.map(category => (
-                            <option value={'category=' + category._id} key={category._id}>
-                                {category.name}
-                            </option>
-                        )) 
-                    }
-                </select>
-      </div> */}
-
       <div className="icons">
         <div
           id="menu-btn"
@@ -58,7 +35,10 @@ const NavBar = ({ openMenu, setOpenMenu }) => {
         ></div>
         <div id="search-btn" className="fas fa-search"></div>
         <Link to="/register" className="fas fa-user"></Link>
-        <Link to="#" className="fas fa-shopping-cart"></Link>
+        <span className="cart_icon">
+          <span>{cart.length}</span>
+          <Link to="/cart" className="fas fa-shopping-cart"></Link>
+        </span>
       </div>
     </div>
   );

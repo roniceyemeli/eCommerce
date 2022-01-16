@@ -40,12 +40,12 @@ const SideBar = ({ openMenu, setOpenMenu }) => {
   const loggedRoutes = () => {
     return (
       <>
-        <Link to="#" onClick={closeMenu}>
-              <i className="fas fa-angle-right"></i>cart
+        <Link to="/" onClick={closeMenu}>
+              <i className="fas fa-angle-right"></i>shop
         </Link>
 
-        <Link to="#" onClick={closeMenu}>
-          <i className="fas fa-angle-right"></i>History
+        <Link to="/cart" onClick={closeMenu}>
+              <i className="fas fa-angle-right"></i>cart
         </Link>
         
         <Link to="/" onClick={logoutUser}>

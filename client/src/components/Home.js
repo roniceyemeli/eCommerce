@@ -7,6 +7,8 @@ import Register from "./pages/register/Register";
 import NotFound from "./utils/notfound/NotFound";
 import Categories from "./pages/category/Categories";
 import AddProducts from "./pages/addProducts/AddProducts";
+import DetailProduct from "./pages/detailProduct/DetailProduct";
+import Cart from './pages/cart/Cart';
 
 const Home = () => {
   const state = useContext(GlobalState);
@@ -47,6 +49,18 @@ const Home = () => {
         exact
         path="/editProduct/:id"
         element={isAdmin ? <AddProducts /> : <NotFound />}
+      />
+
+      <Route
+        exact
+        path="/detail/:id"
+        element={<DetailProduct/>}
+      />
+
+      <Route
+        exact
+        path="/cart"
+        element={<Cart/>}
       />
     </Routes>
   );

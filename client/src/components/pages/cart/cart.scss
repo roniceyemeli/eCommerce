@@ -1,0 +1,121 @@
+@import '../../../../global.scss';
+
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    // gap: 2rem;
+  }
+
+.cartPage{
+
+    .blck{
+        @include grid(29rem);
+        
+    .box-container{
+        padding: 1rem;
+        
+        .box{
+        height: 15rem;
+        padding:1rem;
+        border:$border;
+        background: $white;
+        border-radius: .5rem;
+        box-shadow: $box-shadow;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-left: 3rem;
+  
+        .fa-trash{
+          position: absolute;
+          top:1rem; right:1.5rem;
+          font-size: 1.5rem;
+          color:$red;
+          cursor: pointer;
+          background-color: $white;
+  
+          &:hover{
+            color:$black;
+          }
+        }
+
+        a{
+          background: $white;
+          img{
+            height: 12rem;
+          }
+        }
+  
+        .content{
+            margin-left: 2rem;
+          h3{
+            font-size: 1.7rem;
+            color:$black;
+            background: $white;
+          }
+  
+          .form{
+            padding:1rem 0;
+            display: flex;
+            gap:.5rem;
+            align-items: center;
+            background: $white;
+  
+            span{
+              font-size: 1.5rem;
+              color:$light-blue;
+              background: $white;
+            }
+
+          }
+  
+          .price{
+            font-size: 1.2rem;
+            color:$blue;
+            background: $white;
+  
+            span{
+              font-size: 1rem;
+              color:$light-black;
+              background: $white;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+}
+.cart-total{
+    margin-top: 2rem;
+    width: 25rem;
+    margin: 5px auto;
+    box-shadow: $box-shadow;
+    border:$border;
+    border-radius: .5rem;
+    background: $white;
+    padding:1rem;
+    
+  
+    h3{
+      font-size: 2rem;
+      color:$black;
+      background: $white;
+      margin-left: 2rem;
+  
+      span{
+        color:$blue;
+        background: $white;
+      }
+  }
+  a{
+    color: $white;
+    background: $blue;
+    margin-left: 4.1rem;
+    &:hover{
+      background: $light-blue;
+    }
+  }
+  
+  }
+}
