@@ -5,14 +5,23 @@
   padding: 0;
   font-family: 'Quicksand', sans-serif;
   box-sizing: border-box;
-  background-color: $light-bg;
   outline: none;
   border: none;
   text-transform: capitalize;
   transition: all 0.2s linear;
   text-decoration: none;
-}
+  background-color: $light-bg;
 
-.App{
-  overflow-x: hidden;
+  &::-webkit-scrollbar{
+    width: .5rem;
+  }
+
+  &::-webkit-scrollbar-track{
+    background: $light-bg;
+  }
+
+  &::-webkit-scrollbar-thumb{
+    background: $blue;
+    border-radius: 5rem;
+  }
 }

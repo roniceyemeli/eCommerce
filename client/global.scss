@@ -3,6 +3,7 @@ $light-blue:rgb(116, 149, 233);
 $black: #333;
 $white: #fff;
 $red: red;
+$crimson: crimson;
 $gold: gold;
 $light-black: #666;
 $light-bg: #eee;
@@ -34,8 +35,8 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
 .register{
     
     form{
-        max-width: 25rem;
-        padding: 2rem;
+        max-width: 30rem;
+        padding: 2.2rem;
         text-transform: none;
         background-color: $white;
         box-shadow: $box-shadow;
@@ -57,7 +58,7 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
             font-size: 1rem;
             color: $light-black;
             text-transform: none;
-            margin: .7rem 0;
+            margin: .2rem 0;
             background-color: $white;
         }
         .show{
@@ -74,6 +75,9 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
                 cursor: pointer;
                 background-color: $white;
             }
+        }
+        #message{
+            background-color: $white;
         }
     }
     .btn{
@@ -107,21 +111,23 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
     padding-right: 4rem;
     
     input{
-        height: 25px;
-        width: 25px;
+        height: 15px;
+        width: 15px;
         margin: 0 15px;
         transform: translateY(5px);
     }
 
     span{
-        color: $light-black;
+        color: $black;
+        font-weight: bold;
         letter-spacing: 1px;
     }
 
     button{
         border: 1px solid $red;
-        border-radius: 10px;
-        padding: .7rem;
+        border-radius: 5px;
+        padding: .5rem;
+        font-weight: bold;
         color: $black;
         cursor: pointer;
         &:hover{
@@ -131,18 +137,17 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
     }
 }
 
-// html{
+@media (max-width:1200px){
+
+    *{
+      font-size: 90%;
+    }
   
-//     &::-webkit-scrollbar{
-//       width: .6rem;
-//     }
-  
-//     &::-webkit-scrollbar-track{
-//       background: $white;
-//     }
-  
-//     &::-webkit-scrollbar-thumb{
-//       background: $light-blue;
-//       border-radius: 5rem;
-//     }
-//   }
+    .header{
+      padding:2rem;
+    }
+  }
+
+
+
+

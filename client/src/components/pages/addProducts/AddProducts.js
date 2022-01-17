@@ -202,7 +202,7 @@ const AddProducts = () => {
             id="description"
             required
             value={product.description}
-            rowss="4"
+            rows="4"
             onChange={handleChangeInput}
           />
         </div>

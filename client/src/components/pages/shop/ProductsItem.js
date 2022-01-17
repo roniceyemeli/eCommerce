@@ -37,7 +37,10 @@ const ProductsItem = ({ product, isAdmin, deleteProduct, handleCheck }) => {
                 className="fas fa-edit"
               ></Link>
             </>
-          ) : (
+          ) :
+
+          // when you're not admin this will be displayed
+          (
             <>
               <Link
                 to="#!"

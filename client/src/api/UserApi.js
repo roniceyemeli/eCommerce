@@ -6,8 +6,8 @@ const UserApi = (token) => {
     const [isAdmin, setIsAdmin] = useState(false);
     const [cart, setCart] = useState([]);
 
-
-        useEffect(() => {          
+        //fetch an user and his token
+        useEffect(() => {
             if (token) {
                 const getUser = async() =>{
                     try {
@@ -28,6 +28,7 @@ const UserApi = (token) => {
 
         }, [token]);
 
+        //add a product to our cart
         const addCart = async (product) => {
             if (!isLogged) return alert("Please login to continue purchase");
         
@@ -35,7 +36,6 @@ const UserApi = (token) => {
               return item._id !== product._id;
             });
         
-            console.log(check);
             if (check) {
               setCart([...cart, { ...product, quantity: 1 }]);
         

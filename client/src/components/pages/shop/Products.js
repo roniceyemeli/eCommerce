@@ -63,9 +63,9 @@ const Products = () => {
 
   if (loading) {
     return (
-      <div className="products">
+      // <div className="products">
         <Loading />
-      </div>
+      // </div>
     );
   }
 
@@ -92,8 +92,8 @@ const Products = () => {
           );
         })}
       </div>
-        <LoadMore/>
-      {products.length === 0 && <Loading/>}
+       
+      {products.length === 0 ? <Loading/> : <LoadMore/> }
     </>
   );
 };

@@ -1,0 +1,60 @@
+@import '../../../global.scss';
+
+
+.quick-links{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    background: $light-black;
+    height: 5rem;
+    justify-content: space-around;
+    position: static;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  
+    .logo{
+      font-size: 2rem;
+      color:$white;
+      font-weight: bolder;
+      background: $light-black;
+  
+      i{
+        background: $light-black;
+        padding: .5rem;
+        &:hover{
+            color: $gold;
+        }
+      }
+      span{
+          color: $blue;
+          background: $light-black;
+          &:hover{
+              color: $white;
+          }
+      }
+    }
+
+    .webmaster{
+        background: $light-black;
+        text-transform: lowercase;
+        font-size: 1.5rem;
+        color: $white;
+    }
+  
+    .share{
+        background: $light-black;
+  
+      a{
+        font-size: 1.5rem;
+        color:$white;
+        margin-left: 2rem;
+        background: $light-black;
+  
+        &:hover{
+          color:$gold;
+        }
+      }
+    }
+  }
+  

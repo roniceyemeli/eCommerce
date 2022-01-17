@@ -9,6 +9,7 @@ import Categories from "./pages/category/Categories";
 import AddProducts from "./pages/addProducts/AddProducts";
 import DetailProduct from "./pages/detailProduct/DetailProduct";
 import Cart from './pages/cart/Cart';
+import Contact from "./pages/contact/Contact";
 
 const Home = () => {
   const state = useContext(GlobalState);
@@ -61,6 +62,12 @@ const Home = () => {
         exact
         path="/cart"
         element={<Cart/>}
+      />
+
+      <Route
+        exact
+        path="/contact"
+        element={<Contact/>}
       />
     </Routes>
   );

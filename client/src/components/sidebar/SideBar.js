@@ -51,6 +51,10 @@ const SideBar = ({ openMenu, setOpenMenu }) => {
         <Link to="/" onClick={logoutUser}>
           <i className="fas fa-angle-right"></i>Logout
         </Link>
+
+        <Link to="/contact" onClick={closeMenu}>
+              <i className="fas fa-angle-right"></i>contact
+        </Link>
       </>
     );
   };
@@ -86,8 +90,7 @@ const SideBar = ({ openMenu, setOpenMenu }) => {
             <Link to="/register" onClick={closeMenu}>
               <i className="fas fa-angle-right"></i>register
             </Link>
-            
-            <Link to="#" onClick={closeMenu}>
+            <Link to="/contact" onClick={closeMenu}>
               <i className="fas fa-angle-right"></i>contact
             </Link>
           </>

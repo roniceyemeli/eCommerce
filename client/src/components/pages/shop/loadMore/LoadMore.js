@@ -7,7 +7,7 @@ const LoadMore = () => {
     const state = useContext(GlobalState);
     const [page, setPage] = state.ProductsApi.page;
     const [result] = state.ProductsApi.result;
-    console.log('result is', result.length)
+    console.log('result is', result.length) 
     return (
         <div className='load-more'>
             {
