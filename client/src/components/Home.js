@@ -17,6 +17,7 @@ const Home = () => {
   const [isAdmin] = state.userApi.isAdmin;
 
   return (
+
     <Routes>
       <Route exact path="/" element={<Products />} />
 
@@ -69,6 +70,7 @@ const Home = () => {
         path="/contact"
         element={<Contact/>}
       />
+
     </Routes>
   );
 };
