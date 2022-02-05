@@ -9,6 +9,7 @@
 .products {
   @include grid(19rem);
   padding: 1rem 3rem;
+  min-height: 35vh;
 
   .box {
     margin-top: 1rem;

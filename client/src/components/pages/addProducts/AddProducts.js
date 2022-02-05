@@ -10,7 +10,7 @@ const initialState = {
   title: "",
   price: 0,
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio illo quo ipsam a, fugiat voluptatibus cum nostrum ex dolores nemo est repellat quis facere quae. Repellendus nulla cupiditate tempore expedita.",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cum nostrum ex dolores nemo est repellat quis facere quae. Repellendus nulla cupiditate tempore expedita.",
   category: "",
   _id: "",
 };

@@ -55,7 +55,7 @@ const Cart = () => {
   const deleteItem = (id) => {
     if (window.confirm("Do you want to delete this item")) {
       cart.forEach((item, index) => {
-        if (item._id === id) {
+        if (item._id === id) { 
           cart.splice(index, 1);
         }
       });
@@ -66,7 +66,7 @@ const Cart = () => {
 
   if (cart.length === 0)
     return (
-      <h2
+      <h2 className="empty_cart"
         style={{
           textAlign: "center",
           marginTop: "20%",
@@ -99,7 +99,8 @@ const Cart = () => {
                     className="fas fa-minus-circle"
                     onClick={() => decrement(product._id)}
                   ></i>
-                  <span>quantity : {product.quantity}</span>
+                  {/* <input type="number" defaultValue={1} onChange={product.quantity}/> */}
+                  <span>{product.quantity}</span>
                   <i
                     className="fas fa-plus-circle"
                     onClick={() => increment(product._id)}
@@ -117,7 +118,7 @@ const Cart = () => {
         <h3>
           total : <span>{total}.00TND</span>
         </h3>
-        <Link to="#!" className="btn">
+        <Link to="#" className="btn">
           proceed to checkout
         </Link>
       </div>

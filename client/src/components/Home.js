@@ -10,6 +10,7 @@ import AddProducts from "./pages/addProducts/AddProducts";
 import DetailProduct from "./pages/detailProduct/DetailProduct";
 import Cart from './pages/cart/Cart';
 import Contact from "./pages/contact/Contact";
+import Footer from './footer/Footer'
 
 const Home = () => {
   const state = useContext(GlobalState);
@@ -17,6 +18,8 @@ const Home = () => {
   const [isAdmin] = state.userApi.isAdmin;
 
   return (
+    <div>
+
 
     <Routes>
       <Route exact path="/" element={<Products />} />
@@ -25,13 +28,13 @@ const Home = () => {
         exact
         path="/login"
         element={isLogged ? <NotFound /> : <Login />}
-      />
+        />
 
       <Route
         exact
         path="/register"
         element={isLogged ? <NotFound /> : <Register />}
-      />
+        />
 
       <Route exact path="*" element={<NotFound />} />
 
@@ -39,7 +42,7 @@ const Home = () => {
         exact
         path="/category"
         element={isAdmin ? <Categories /> : <NotFound />}
-      />
+        />
 
       <Route
         exact
@@ -51,27 +54,31 @@ const Home = () => {
         exact
         path="/editProduct/:id"
         element={isAdmin ? <AddProducts /> : <NotFound />}
-      />
+        />
 
       <Route
         exact
         path="/detail/:id"
         element={<DetailProduct/>}
-      />
+        />
 
       <Route
         exact
         path="/cart"
         element={<Cart/>}
-      />
+        />
 
       <Route
         exact
         path="/contact"
         element={<Contact/>}
-      />
+        />
 
     </Routes>
+     {/* //our footbar component */}
+    <Footer/>
+    
+    </div>
   );
 };
 

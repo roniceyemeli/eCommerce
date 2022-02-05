@@ -96,6 +96,7 @@ const SideBar = ({ openMenu, setOpenMenu }) => {
           </>
         )}
       </nav>
+      <p className="copyright">&copy;roniceyemeli {new Date().getFullYear()}</p> 
     </div>
   );
 };

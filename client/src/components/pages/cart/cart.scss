@@ -7,8 +7,11 @@
     // gap: 2rem;
   }
 
-.cartPage{
+  .empty_cart{
+    min-height: 50vh;
+  }
 
+.cartPage{
     .blck{
         @include grid(29rem);
         
@@ -16,6 +19,7 @@
         padding: 1rem;
         
         .box{
+        // min-height: 100vh;
         height: 15rem;
         padding:1rem;
         border:$border;
@@ -58,14 +62,18 @@
           .form{
             padding:1rem 0;
             display: flex;
-            gap:.5rem;
+            gap: 3rem;
             align-items: center;
             background: $white;
   
             span{
-              font-size: 1.5rem;
+              font-size: 1.4rem;
               color:$light-blue;
-              background: $white;
+              background: inherit;
+            }
+            i{
+              background-color: inherit;
+              cursor: pointer;
             }
 
           }

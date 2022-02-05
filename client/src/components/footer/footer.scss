@@ -1,60 +1,136 @@
 @import '../../../global.scss';
 
 
-.quick-links{
+.footbar{
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  right: 0;
+  left: 0;
+  background-color: $light-black;
+
+  @media (max-width: 450px){
+    padding: 0 3%;
+  }
+  
+  .foot_text{
     display: flex;
     align-items: center;
     gap:2rem;
-    background: $light-black;
-    height: 4rem;
+    background-color: $light-black;
     justify-content: space-around;
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-  
-    .logo{
-      font-size: 1rem;
-      color:$white;
-      font-weight: bolder;
-      background: $light-black;
-  
+    @media (max-width: 600px){
+      gap: 1rem;
+    }
+    @media (max-width: 450px){
+      gap: .6rem;
+    }
+
+    .footer_logo{
+      background-color: $light-black;
+
       i{
-        background: $light-black;
-        padding: .5rem;
-        &:hover{
-            color: $gold;
+        background-color: $light-black;
+        color: $gold;
+        font-size: 1.7rem;
+
+        @media (max-width: 660px){
+          font-size: 1.1rem;
+        }
+        @media (max-width: 450px){
+          font-size: .8rem;
         }
       }
       span{
-          color: $blue;
-          background: $light-black;
-          &:hover{
-              color: $white;
-          }
+        background-color: inherit;
+        color: $black;
+        line-height: 10px;
+        margin-left: 5px;
+        font-size: 1.5rem;
+        @media (max-width: 660px){
+          font-size: 1.1rem;
+        }
+        @media (max-width: 450px){
+          font-size: .8rem;
+        }
+
+        &:hover{
+          color: lightgray;
+        }
       }
     }
 
-    .webmaster{
-        background: $light-black;
-        text-transform: lowercase;
-        font-size: 1rem;
-        color: $white;
-    }
-  
-    .share{
-        background: $light-black;
-  
-      a{
-        font-size: 1rem;
-        color:$white;
-        margin-left: 2rem;
-        background: $light-black;
-  
-        &:hover{
-          color:$gold;
+    .cols{
+      background-color: $light-black;
+      margin-top: 1rem;
+      
+      h2{
+        background-color: $light-black;
+        @media (max-width: 660px){
+          font-size: .9rem;
+        }
+      }
+      
+      ul{
+        list-style: none;
+        margin-top: 1rem;
+        background-color: $light-black;
+        
+        li{
+          background-color: $light-black;
+          margin-top: 1rem;
+          a{
+            background-color: inherit;
+            color: $black;
+            @media (max-width: 660px){
+              font-size: 80%;
+            }
+            @media (max-width: 450px){
+              font-size: 60%;
+            }
+
+            &:hover{
+              color: lightgray;
+            }
+          }
+        }
+      }
+      .share{
+        background-color: $light-black;
+
+        li{
+
+          i{
+            background-color: $light-black;
+            @media (max-width: 450px){
+                font-size: 60%;
+            }
+          }
+          a{
+            background-color: $light-black;
+            text-decoration: none;
+            color: $black;
+            margin-left: 0.5rem;
+          }
         }
       }
     }
   }
+
+  .webmaster{
+    background-color: $light-black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    p{
+      background-color: inherit;
+      text-transform: lowercase;
+      @media (max-width: 660px){
+        font-size: 60%;
+      }
+    }
+  }
   
+  }

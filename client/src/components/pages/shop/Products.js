@@ -5,6 +5,7 @@ import "./productsItem.scss";
 import Loading from "../../utils/loading/Loading";
 import axios from "axios";
 import LoadMore from './loadMore/LoadMore';
+// import Slider from './Slider'
 
 const Products = () => {
   const state = useContext(GlobalState);
@@ -23,27 +24,30 @@ const Products = () => {
   };
 
   const deleteProduct = async (id, public_id) => {
-    console.log({ id, public_id });
-    try {
-      setLoading(true);
-      const eraseImg = axios.post(
-        "/api/erase",
-        { public_id },
-        {
+    if (window.confirm('do you really want to delete this products ?')) {
+
+      console.log({ id, public_id });
+      try {
+        setLoading(true);
+        const eraseImg = axios.post(
+          "/api/erase",
+          { public_id },
+          {
           headers: { Authorization: token },
         }
-      );
-      const deleteProduct = axios.delete(`/api/products/${id}`, {
-        headers: { Authorization: token },
-      });
-
-      await eraseImg;
-      await deleteProduct;
-      setCallback(!callback);
-      setLoading(false);
-    } catch (error) {
-      alert(error.response.data.lsg);
-    }
+        );
+        const deleteProduct = axios.delete(`/api/products/${id}`, {
+          headers: { Authorization: token },
+        });
+        
+        await eraseImg;
+        await deleteProduct;
+        setCallback(!callback);
+        setLoading(false);
+      } catch (error) {
+        alert(error.response.data.lsg);
+      }
+    };
   };
 
   const checkAll = () => {
@@ -55,17 +59,17 @@ const Products = () => {
   };
 
   const deleteSelected = () => {
-    products.forEach((product) => {
-      if (product.checked)
+    if (window.confirm("Are you sure you wan to delete all items ?")){
+      products.forEach((product) => {
+        if (product.checked)
         return deleteProduct(product._id, product.images.public_id);
-    });
+      });
+    }
   };
 
   if (loading) {
     return (
-      // <div className="products">
         <Loading />
-      // </div>
     );
   }
 
@@ -78,8 +82,9 @@ const Products = () => {
           <button onClick={deleteSelected}>Delete All</button>
         </div>
       )}
-
+      {/* <Slider/> */}
       <div className="products">
+        
         {products.map((product) => {
           return (
             <ProductsItem

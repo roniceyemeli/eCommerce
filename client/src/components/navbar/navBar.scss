@@ -12,24 +12,38 @@
     align-items: center;
     padding: 1rem 6%;
 
+    @media (max-width: 1200px) {
+        font-size: 55%;
+        padding: 1rem 5%;
+    }
+
+
     .logo{
         font-size: 1.7rem;
         font-weight: bolder;
         text-decoration: none;
         background-color: $blue;
         color: $white;
+        
 
         i{
             color: $gold;
             background-color: $blue;
         }
+        span{
+            background-color: inherit;
+            margin-left: 0.5rem;
+            @media (max-width:690px) {
+                display: none;
+            }
+        }
     }
 
-    .filterMenu{
-        padding: .6rem;
-        border-radius: 10px;
-        text-align: center;
-        }
+    // .filterMenu{
+    //     padding: .6rem;
+    //     border-radius: 10px;
+    //     text-align: center;
+    //     }
     
 
     .search-form{
@@ -40,19 +54,34 @@
         padding: 0 2rem;
         display: flex;
         align-items: center;
-
-        @media(max-width: 768px){
-           width: 20rem;
+        @media (max-width:1200px) {
+            width: 17rem;
         }
+        @media (max-width:690px) {
+            width: 17rem;
+        }
+        @media (max-width:465px) {
+            width: 11rem;
+            height: 1.8rem;
+        }
+
+
 
         input{
             width: 260px;
-            padding-right: 1rem;
+            // padding-right: 1rem;
             font-size: 1rem;
             text-transform: none;
             background: $white;
+            @media (max-width:690px) {
+                width: 200px;
+            }
+            @media (max-width:465px) {
+                width: 120px;
+                
+            }
         }
-        label{
+        a label{
             font-size: 1.4rem;
             color: $light-black;
             cursor: pointer;
@@ -60,21 +89,35 @@
             &:hover{
                 color:$blue;
             }
+            @media (max-width:1200px) {
+                font-size: 1.1rem;
+            }
+            @media (max-width:465px) {
+                font-size: 1rem;
+            }
         }
     }
 
     .icons{
         background-color: $blue;
+
         div{
             @include icon
+        }
+        @media (max-width:520px) {
+            .fa-user{
+                display: none;
+            }
+        }
+        .cart_icon{
+            @media (max-width:345px) {
+                display: none;
+            }
         }
         a{
             @include icon
         }
-
-        #search-btn{
-            display: none;
-                }          
+                
         }
         .cart_icon{
             position: relative;

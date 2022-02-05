@@ -7,7 +7,6 @@
     left:-50px;
     height: 100vh;
     width: 20rem;
-    // background-color: $white;
     z-index: 10000;
 
     &.active {
@@ -75,5 +74,12 @@
                 padding-right: .5rem;
             }
         }
+    }
+    .copyright{
+        width: 11rem;
+        margin-left: 6rem;
+        text-transform: lowercase;
+        position: absolute;
+        bottom: 2px;
     }
 }

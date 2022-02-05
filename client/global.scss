@@ -19,6 +19,9 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
     &:hover{
         color: $gold;
     }
+    @media (max-width:690px) {
+        margin-left: 1rem;
+    }
 }
 
 .btn{
@@ -137,18 +140,3 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
         }
     }
 }
-
-@media (max-width:1200px){
-
-    *{
-      font-size: 90%;
-    }
-  
-    .header{
-      padding:2rem;
-    }
-  }
-
-
-
-

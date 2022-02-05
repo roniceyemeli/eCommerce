@@ -1,17 +1,17 @@
 @import "../../../../global.scss";
 
 .createProduct {
-  width: 70rem;
+  width: 90%;
   height: 30rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   background-color: $white;
-  margin-left: 5rem;
-  margin-top: 2rem;
+  margin: 3rem auto;
   box-shadow: $box-shadow;
   border-radius: 10px;
+
 
   .upload {
     max-width: 55rem;
@@ -51,7 +51,7 @@
         width: 100%;
         height: 100%;
         display: block;
-        object-fit: cover;
+        object-fit: contain;
       }
 
       span {

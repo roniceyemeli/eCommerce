@@ -13,7 +13,8 @@ const NavBar = ({ openMenu, setOpenMenu }) => {
     <div className="header">
 
       <Link to="/" className="logo">
-        <i className="fas fa-store"></i> freestore
+        <i className="fas fa-store"></i>
+        <span>freestore</span>
       </Link>
 
       <form className="search-form">
@@ -24,7 +25,7 @@ const NavBar = ({ openMenu, setOpenMenu }) => {
           placeholder="Type your search..."
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
         />
-        <label htmlFor="search-box" className="fas fa-search"></label>
+        <Link to="/"><label htmlFor="search-box" className="fas fa-search"></label></Link>
       </form>
 
       <div className="icons">
@@ -33,7 +34,6 @@ const NavBar = ({ openMenu, setOpenMenu }) => {
           className="fas fa-bars"
           onClick={() => setOpenMenu(!openMenu)}
         ></div>
-        <div id="search-btn" className="fas fa-search"></div>
         <Link to="/register" className="fas fa-user"></Link>
         <span className="cart_icon">
           <span>{cart.length}</span>

@@ -11,14 +11,14 @@ const LoadMore = () => {
     return (
         <div className='load-more'>
             {
-                result.length < page * 8 ? "" :
+                result.length < page * 10 ? "" :
                 <button onClick={()=>setPage(page+1)}>view more</button>
             }{
-                result.length > page * 8 ? "" :
+                result.length > page * 10 ? "" :
                 <button onClick={()=>setPage(page-1)}>view less</button>
             }
         </div>
     )
 }
 
-export default LoadMore
+export default LoadMore;
