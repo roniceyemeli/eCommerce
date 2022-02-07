@@ -5,7 +5,7 @@ import "./productsItem.scss";
 import Loading from "../../utils/loading/Loading";
 import axios from "axios";
 import LoadMore from './loadMore/LoadMore';
-// import Slider from './Slider'
+import Sliders from './Sliders'
 
 const Products = () => {
   const state = useContext(GlobalState);
@@ -14,6 +14,7 @@ const Products = () => {
   const [token] = state.token;
   const [callback, setCallback] = state.ProductsApi.callback;
   const [loading, setLoading] = useState(false);
+  console.log(loading);
   const [isCheck, setIsCheck] = useState(false);
 
   const handleCheck = (id) => {
@@ -67,11 +68,11 @@ const Products = () => {
     }
   };
 
-  if (loading) {
-    return (
-        <Loading />
-    );
-  }
+  // if (loading) {
+  //   return (
+  //       <Loading />
+  //   );
+  // }
 
   return (
     <>
@@ -82,7 +83,7 @@ const Products = () => {
           <button onClick={deleteSelected}>Delete All</button>
         </div>
       )}
-      {/* <Slider/> */}
+      <Sliders/>
       <div className="products">
         
         {products.map((product) => {

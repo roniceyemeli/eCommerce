@@ -9,6 +9,7 @@ const initialState = {
   productId: "",
   title: "",
   price: 0,
+  sold: 0,
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cum nostrum ex dolores nemo est repellat quis facere quae. Repellendus nulla cupiditate tempore expedita.",
   category: "",
@@ -190,6 +191,17 @@ const AddProducts = () => {
             id="price"
             required
             value={product.price}
+            onChange={handleChangeInput}
+          />
+        </div>
+        <div className="rows">
+          <label htmlFor="sold">sold</label>
+          <input
+            type="number"
+            name="sold"
+            id="sold"
+            required
+            value={product.sold}
             onChange={handleChangeInput}
           />
         </div>

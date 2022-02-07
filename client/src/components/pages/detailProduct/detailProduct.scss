@@ -1,8 +1,11 @@
 @import '../../../../global.scss';
 
-
-
-.detail{
+.detailPage{
+    min-height: 70vh;
+    margin-top: 5rem;
+}
+    
+    .detail{
     border-radius: 10px;
     max-width: 70rem;
     display: flex;

@@ -43,10 +43,10 @@
       }
       span{
         background-color: inherit;
-        color: $black;
+        color: $white;
         line-height: 10px;
         margin-left: 5px;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         @media (max-width: 660px){
           font-size: 1.1rem;
         }
@@ -81,7 +81,8 @@
           margin-top: 1rem;
           a{
             background-color: inherit;
-            color: $black;
+            color: #9b9b9b;
+            font-weight: 500;
             @media (max-width: 660px){
               font-size: 80%;
             }
@@ -109,7 +110,7 @@
           a{
             background-color: $light-black;
             text-decoration: none;
-            color: $black;
+            color: #9b9b9b;
             margin-left: 0.5rem;
           }
         }

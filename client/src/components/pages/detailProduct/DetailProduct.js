@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { GlobalState } from "../../../GlobalState";
 import ProductsItem from "../../pages/shop/ProductsItem";
 import "./detailProduct.scss";
+import Loading from '../../utils/loading/Loading';
 
 const DetailProduct = () => {
   const params = useParams();
@@ -19,7 +20,7 @@ const DetailProduct = () => {
     }
   }, [params.id, products]);
 
-  if (detailProduct.length === 0) return null;
+  if (detailProduct.length === 0) return  <div className="detailPage"><Loading/></div>
 
   return (
     <>

@@ -70,6 +70,7 @@ const productController = {
         productId,
         title,
         price,
+        sold,
         description,
         category,
         images,
@@ -84,6 +85,7 @@ const productController = {
         productId,
         title: title.toLowerCase(),
         price,
+        sold,
         description,
         category,
         images,
@@ -106,7 +108,7 @@ const productController = {
   },
   updateProduct: async (req, res) => {
     try {
-      const { title, price, description, category, images } = req.body;
+      const { title, price, sold, description, category, images } = req.body;
       if (!images)
         return res.status(400).json({ msg: "you should upload an image :)" });
 
@@ -115,6 +117,7 @@ const productController = {
         {
           title: title.toLowerCase(),
           price,
+          sold,
           description,
           category,
           images,

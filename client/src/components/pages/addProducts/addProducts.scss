@@ -2,7 +2,7 @@
 
 .createProduct {
   width: 90%;
-  height: 30rem;
+  min-height: 50vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -19,6 +19,7 @@
     padding: 15px;
     position: relative;
     border: $border;
+    background-color: $white;
 
     #file_up {
       width: 100%;
@@ -32,7 +33,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        background: white;
+        background-color: $white;
         color: $blue;
         font-size: 14rem;
         text-align: center;
@@ -52,6 +53,7 @@
         height: 100%;
         display: block;
         object-fit: contain;
+        background-color: $white;
       }
 
       span {
@@ -72,9 +74,6 @@
 
   form {
     background-color: $white;
-    max-width: 500px;
-    min-width: 290px;
-    width: 100%;
     margin: 15px 30px;
 
     .rows {
