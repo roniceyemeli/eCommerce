@@ -14,12 +14,12 @@
 .cartPage{
     .blck{
         @include grid(29rem);
+        min-height: 50vh;
         
     .box-container{
         padding: 1rem;
         
         .box{
-        // min-height: 100vh;
         height: 15rem;
         padding:1rem;
         border:$border;
@@ -52,7 +52,7 @@
         }
   
         .content{
-            margin-left: 2rem;
+            margin-left: 5rem;
           h3{
             font-size: 1.7rem;
             color:$black;
@@ -121,7 +121,8 @@
     background: $blue;
     margin-left: 4.1rem;
     &:hover{
-      background: $light-blue;
+      background: $light-black;
+      color: $white;
     }
   }
   

@@ -83,7 +83,9 @@ const Products = () => {
           <button onClick={deleteSelected}>Delete All</button>
         </div>
       )}
-      <Sliders/>
+      
+      {!isAdmin && <Sliders/>}
+        
       <div className="products">
         
         {products.map((product) => {

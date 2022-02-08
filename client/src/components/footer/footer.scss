@@ -44,9 +44,9 @@
       span{
         background-color: inherit;
         color: $white;
-        line-height: 10px;
         margin-left: 5px;
         font-size: 1.7rem;
+        font-weight: bolder;
         @media (max-width: 660px){
           font-size: 1.1rem;
         }

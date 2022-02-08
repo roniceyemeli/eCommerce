@@ -99,7 +99,6 @@ const Cart = () => {
                     className="fas fa-minus-circle"
                     onClick={() => decrement(product._id)}
                   ></i>
-                  {/* <input type="number" defaultValue={1} onChange={product.quantity}/> */}
                   <span>{product.quantity}</span>
                   <i
                     className="fas fa-plus-circle"
@@ -109,6 +108,16 @@ const Cart = () => {
                 <div className="price">
                   price : <span>{product.price * product.quantity}.00TND</span>
                 </div>
+                {product.sold > 0 && (
+                  <>
+                  <div className="price">
+                  sold : <span>{product.sold}%</span>
+                  </div>
+                  <div className="price">
+                  new price : <span>{product.price - product.price * product.sold * 0.01}.00TND</span>
+                  </div>
+                  </>
+                )}
               </div>
             </div>
           </div>

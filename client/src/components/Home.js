@@ -59,13 +59,13 @@ const Home = () => {
       <Route
         exact
         path="/detail/:id"
-        element={<DetailProduct/>}
+        element={isAdmin ? <NotFound/> : <DetailProduct/> }
         />
 
       <Route
         exact
         path="/cart"
-        element={<Cart/>}
+        element={isAdmin ? <NotFound/> : <Cart/> }
         />
 
       <Route

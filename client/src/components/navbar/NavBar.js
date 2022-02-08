@@ -34,7 +34,7 @@ const NavBar = ({ openMenu, setOpenMenu }) => {
           className="fas fa-bars"
           onClick={() => setOpenMenu(!openMenu)}
         ></div>
-        <Link to="/register" className="fas fa-user"></Link>
+        <Link to="/login" className="fas fa-user"></Link>
         <span className="cart_icon">
           <span>{cart.length}</span>
           <Link to="/cart" className="fas fa-shopping-cart"></Link>

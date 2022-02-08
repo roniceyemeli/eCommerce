@@ -26,6 +26,7 @@ const DetailProduct = () => {
     <>
       <div className="detail">
         <img src={detailProduct.images.url} alt="" />
+        
         <div className="box-detail">
           <div className="row">
             <h4>{detailProduct.title}</h4>
@@ -34,8 +35,11 @@ const DetailProduct = () => {
           <h6>
             Price: <span className="price">{detailProduct.price}.00TND</span>
           </h6>
+          <h6>
+            sold: <span className="price">{detailProduct.sold}%</span>
+          </h6>
           <p>
-            Description:{" "}
+            Description:
             <span className="desc">{detailProduct.description}</span>
           </p>
           <p>Sold: {detailProduct.sold}</p>
