@@ -69,6 +69,8 @@
     .content {
       padding: 0.5rem;
       background-color: $white;
+      display: flex;
+      flex-direction: column;
 
       h3 {
         font-size: 1.5rem;
@@ -80,7 +82,7 @@
         color: $blue;
         background-color: $white;
       }
-      span {
+      .desc {
         color: $light-black;
         font-size: 1.5rem;
         background-color: $white;

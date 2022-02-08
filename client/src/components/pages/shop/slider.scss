@@ -1,7 +1,5 @@
 @import '../../../../global.scss';
 
-
-
 .slide_title{
     text-align: center;
 }
@@ -40,7 +38,7 @@
   }
 
   .swiper-button-next, .swiper-button-prev {
-    background-color: $white;
+    background-color: transparent;
   }
   h1{
     width: 30%;
@@ -50,8 +48,7 @@
     width: 30%;
     height: 5rem;
     background-color: $white;
-    margin-left: 6rem;
-    
+
     span{
       background-color: $blue;
       color: $white;
@@ -60,7 +57,7 @@
       font-size: 2.5rem;
       width: 20vw;
       height: 10vh;
-      border-radius: 10px;
+      border-radius: 50%;
       padding: .7rem;
     }
   }

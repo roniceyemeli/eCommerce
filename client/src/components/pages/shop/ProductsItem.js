@@ -55,7 +55,7 @@ const ProductsItem = ({ product, isAdmin, deleteProduct, handleCheck }) => {
       <div className="content">
         <h3>{product.title}</h3>
         <div className="price">{product.price}.00TND</div>
-        <span className="desc">{product.description}</span>
+        <div className="desc">{product.description}</div>
       </div>
     </div>
   );

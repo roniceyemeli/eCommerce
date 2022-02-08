@@ -14,7 +14,7 @@ const Cart = () => {
   useEffect(() => {
     const getTotal = () => {
       const total = cart.reduce((prev, item) => {
-        return prev + item.price * item.quantity;
+        return prev + (item.price - item.price*item.sold*0.01)* item.quantity;
       }, 0);
       setTotal(total);
     };
