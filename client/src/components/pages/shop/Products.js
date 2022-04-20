@@ -5,7 +5,7 @@ import "./productsItem.scss";
 import Loading from "../../utils/loading/Loading";
 import axios from "axios";
 import LoadMore from './loadMore/LoadMore';
-import Sliders from './Sliders'
+// import Sliders from './Sliders'
 
 const Products = () => {
   const state = useContext(GlobalState);
@@ -84,7 +84,7 @@ const Products = () => {
         </div>
       )}
       
-      {!isAdmin && <Sliders/>}
+      {/* {!isAdmin && <Sliders/>} */}
         
       <div className="products">
         

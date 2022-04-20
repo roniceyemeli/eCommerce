@@ -10,7 +10,7 @@
     "all": "npm-run-all --parallel scriptOne scriptTwo"
   },
   "repository": {
-    "type": "git",
+    "type": "github",
     "url": "roniceyemeli"
   },
   "author": "roniceyemeli@gmail.com",
