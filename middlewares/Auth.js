@@ -2,8 +2,6 @@ const config = require('config');
 const token_access_secret = config.get('token_access_secret');
 const jwt = require('jsonwebtoken');
 
-
-
 const Auth =  (req, res, next) => {
     try {
         const token = req.header('Authorization');
