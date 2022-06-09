@@ -14,7 +14,7 @@ const NavBar = ({ openMenu, setOpenMenu }) => {
 
       <Link to="/" className="logo">
         <i className="fas fa-store"></i>
-        <span>freestore</span>
+        <span>Ifriqiya Shop</span>
       </Link>
 
       <form className="search-form">

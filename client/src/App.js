@@ -14,7 +14,7 @@ function App() {
       <DataProvider>
       <Router>
             <NavBar openMenu={openMenu} setOpenMenu={setOpenMenu}/>
-            { openMenu ? <SideBar openMenu={openMenu} setOpenMenu={setOpenMenu}/> : null}
+            <SideBar openMenu={openMenu} setOpenMenu={setOpenMenu}/>
             <Home/>
       </Router>
     </DataProvider>

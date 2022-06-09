@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="foot_text">
         <Link to="/" className="footer_logo" onClick={scrollToTop}>
           <i className="fas fa-store"></i>
-          <span>freestore</span>
+          <span>Ifriqiya Shop</span>
         </Link>
         <div className="cols">
           <h2>about us</h2>
